@@ -44,6 +44,14 @@
 #define MBED_CONF_PPP_CELL_IFACE_AT_PARSER_TIMEOUT        8000                         // set by library:ppp-cell-iface
 #define MBED_CONF_PPP_CELL_IFACE_BAUD_RATE                115200                       // set by library:ppp-cell-iface
 #define MBED_CONF_RTOS_PRESENT                            1                            // set by library:rtos
+#define STM32_D11_SPI_ETHERNET_PIN                        PA_7                         // set by target:NUCLEO_F746ZG
+#define MBED_CONF_LWIP_IPV4_ENABLED                       1                            // set by library:lwip
+#define MBED_CONF_LWIP_IPV6_ENABLED                       0                            // set by library:lwip
+#define MBED_CONF_LWIP_IP_VER_PREF                        4                            // set by library:lwip
+
+
+
+
 // Macros
 #define UNITY_INCLUDE_CONFIG_H                                                         // defined by library:utest
 

@@ -177,7 +177,7 @@ ARM Macro Assembler    Page 3
               00000014 
               00000000 
 Command Line: --debug --xref --cpreproc --diag_suppress=9931 --cpu=Cortex-M3 -o
-.\build\irq_cm3.o -I.\RTE\_Nucleo_rtos_basic_v2 -IC:\Users\Luca\AppData\Local\A
+.\build\irq_cm3.o -I.\RTE\_Nucleo_rtos_basic_f7 -IC:\Users\Luca\AppData\Local\A
 rm\Packs\Keil\STM32L1xx_DFP\1.2.0\Device\Include -II:\HDDProgInstall\keil\ARM\C
 MSIS\Include --predefine="__UVISION_VERSION SETA 529" --predefine="STM32L152xE 
 SETA 1" --cpreproc_opts=-D__ASSERT_MSG,-D__CMSIS_RTOS,-D__MBED_CMSIS_RTOS_CM,-D
