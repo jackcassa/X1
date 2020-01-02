@@ -701,7 +701,7 @@ int main()
   string line;
 
 
-
+ //stage
 
   while(true){
 
