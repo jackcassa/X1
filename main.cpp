@@ -106,6 +106,17 @@ static EventQueue queue(64*100*sizeof(char)); // 8 words of storage
 
 
 
+int RangeX=0;
+char bufferCommand[100] ;
+char * test;
+const char * test_line;
+Thread      ISRthread(osPriorityAboveNormal);
+osThreadId  ISRthreadId;
+Thread t;
+int serial_count=0;
+
+
+
 void alarm_pinA4_on(){
   printf("ON A4\n");
   myled=1;
@@ -148,15 +159,10 @@ void SendStatus(){
 }
 
 
-
-
-
-int RangeX=0;
-char bufferCommand[100] ;
-
-char * test;
-
-const char * test_line;
+typedef struct {
+    char  message [64];
+    uint32_t counter;   /* A counter value               */
+} message_t;
 
 
 void processLine(string line){
@@ -405,14 +411,6 @@ void my_error_handler(uint16_t error)
 
 
 
-Thread      ISRthread(osPriorityAboveNormal);
-osThreadId  ISRthreadId;
-Thread t;
-
-typedef struct {
-    char  message [64];
-    uint32_t counter;   /* A counter value               */
-} message_t;
 
 
 MemoryPool<message_t, 16> mpool;
@@ -427,10 +425,6 @@ Mutex       serial_mutex;
 void        newInput();
 void        ISR_thread();
 
-
-
-
-
 void newInput()
 {
     Console.attach(NULL);    //detach the ISR to prevent recursive calls
@@ -439,7 +433,6 @@ void newInput()
 
 
 
-int serial_count=0;
 
 
 
@@ -591,141 +584,13 @@ int main()
 
 
   InterA4.rise(&alarm_pinA4_on);
+	
   InterA4.fall(&alarm_pinA4_off);
+	
   InterA4.enable_irq();
 	
 	
+	
 
-
-  motor2->enable();
-  motor3->enable();
-
-
-
-
-  while(false) {
-    motor2->set_direction(FORWARD);
-    motor3->set_direction(FORWARD);
-    for (int i=0;i<200*16;i++){
-      motor2->Step();
-      motor3->Step();
-      wait_us(300);
-    }
-
-    POWER=0;
-    wait_ms(5000);
-    POWER=1;
-    wait_ms(5000);
-
-    motor2->enable();
-    motor3->enable();
-
-    motor2->set_direction(BACKWARD);
-    motor3->set_direction(BACKWARD);
-
-    for (int i=0;i<200*16;i++){
-      motor2->Step();
-      motor3->Step();
-      wait_us(300);
-    }
-
-    POWER=0;
-    wait_ms(5000);
-    POWER=1;
-    wait_ms(5000);
-
-    motor2->enable();
-    motor3->enable();
-
-  }
-
-  /* Infinite Loop. */
-  while(false) {
-
-    step_mode=motor1->set_step_mode(StepperMotor::STEP_MODE_1_4);
-#ifdef M2
-    step_mode=motor2->set_step_mode(StepperMotor::STEP_MODE_1_4);
-#ifdef M3
-    step_mode=motor3->set_step_mode(StepperMotor::STEP_MODE_1_4);
-#endif
-#endif
-
-    /* Requesting to go to a specified position. */
-    motor1->go_to(- (STEPS >> 1));
-#ifdef M2
-    motor2->go_to(- (STEPS >> 1));
-#ifdef M3
-    motor3->go_to(- (STEPS >> 1));
-#endif
-#endif
-
-    /* Waiting while the motor is active. */
-    motor1->wait_while_active();
-#ifdef M2
-    motor2->wait_while_active();
-#ifdef M3
-    motor3->wait_while_active();
-#endif
-#endif
-
-    wait_ms(1000);
-
-    step_mode=motor1->set_step_mode(StepperMotor::STEP_MODE_1_8);
-#ifdef M2
-    step_mode=motor2->set_step_mode(StepperMotor::STEP_MODE_1_16);
-#ifdef M3
-    step_mode=motor3->set_step_mode(StepperMotor::STEP_MODE_1_4);
-#endif
-#endif
-    /* Requesting to go to a specified position. */
-    motor1->go_to( (STEPS >> 1));
-#ifdef M2
-    motor2->go_to( (STEPS >> 1));
-#ifdef M3
-    motor3->go_to( (STEPS >> 1));
-#endif
-#endif
-
-    /* Waiting while the motor is active. */
-    motor1->wait_while_active();
-#ifdef M2
-    motor2->wait_while_active();
-#ifdef M3
-    motor3->wait_while_active();
-#endif
-#endif
-
-
-  }
-
-  string line;
-
-
- //stage 2
-
-  while(true){
-
-    if ( Console.readable() )
-    {
-      debug_r= (char*) line.c_str();
-
-      char serial_char = Console.getc();
-      serial_count++;
-      if (serial_char == '\n' )
-      {
-        // pc.puts(line.c_str());
-        processLine(line);
-        line="";
-        serial_count=0;
-
-      }
-      else
-      {
-        line.push_back(serial_char);
-      }
-
-    }
-
-  }
 }
 

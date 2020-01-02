@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\BUILD\Nucleo_rtos_basic_v2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\BUILD\Nucleo_rtos_basic_v2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Thu Jan  2 11:17:45 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6130100: Last Updated: Thu Jan  2 17:39:33 2020
 <BR><P>
-<H3>Maximum Stack Usage =        760 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        768 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 pre_main &rArr; main &rArr; $Super$$main &rArr; main_th() &rArr; processLine(std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;) &rArr; Tokenizer::Tokenizer(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&, const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;::basic_string(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; operator new(unsigned) &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 <P>
@@ -180,13 +180,13 @@ Function Pointers
  <LI><a href="#[5a]">mbed::RawSerial::~RawSerial__sub_object()</a> from .\build\greentea_serial.o(.text._ZN4mbed9RawSerialD2Ev) referenced from .\build\rawserial.o(.rodata._ZTVN4mbed9RawSerialE)
  <LI><a href="#[5a]">mbed::RawSerial::~RawSerial__sub_object()</a> from .\build\greentea_serial.o(.text._ZN4mbed9RawSerialD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.7)
  <LI><a href="#[57]">rtos::MemoryPool&lang;message_t, (unsigned)16&rang;::~MemoryPool__sub_object()</a> from .\build\main.o(.text._ZN4rtos10MemoryPoolI9message_tLj16EED2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.39)
- <LI><a href="#[55]">rtos::Mutex::~Mutex()</a> from .\build\mutex.o(.text._ZN4rtos5MutexD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.13)
- <LI><a href="#[55]">rtos::Mutex::~Mutex()</a> from .\build\mutex.o(.text._ZN4rtos5MutexD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.41)
+ <LI><a href="#[56]">rtos::Mutex::~Mutex()</a> from .\build\mutex.o(.text._ZN4rtos5MutexD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.15)
+ <LI><a href="#[56]">rtos::Mutex::~Mutex()</a> from .\build\mutex.o(.text._ZN4rtos5MutexD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.41)
  <LI><a href="#[58]">rtos::Queue&lang;message_t, (unsigned)16&rang;::~Queue__sub_object()</a> from .\build\main.o(.text._ZN4rtos5QueueI9message_tLj16EED2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.40)
  <LI><a href="#[4f]">rtos::Thread::_thunk(void*)</a> from .\build\thread.o(.text._ZN4rtos6Thread6_thunkEPv) referenced 2 times from .\build\thread.o(.text._ZN4rtos6Thread5startEN4mbed8CallbackIFvvEEE)
  <LI><a href="#[9e]">rtos::Thread::~Thread__deallocating()</a> from .\build\thread.o(.text._ZN4rtos6ThreadD0Ev) referenced from .\build\thread.o(.rodata._ZTVN4rtos6ThreadE)
- <LI><a href="#[56]">rtos::Thread::~Thread()</a> from .\build\thread.o(.text._ZN4rtos6ThreadD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.37)
- <LI><a href="#[56]">rtos::Thread::~Thread()</a> from .\build\thread.o(.text._ZN4rtos6ThreadD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.38)
+ <LI><a href="#[55]">rtos::Thread::~Thread()</a> from .\build\thread.o(.text._ZN4rtos6ThreadD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.10)
+ <LI><a href="#[55]">rtos::Thread::~Thread()</a> from .\build\thread.o(.text._ZN4rtos6ThreadD2Ev) referenced 2 times from .\build\main.o(.text.__cxx_global_var_init.9)
  <LI><a href="#[9d]">rtos::Thread::~Thread__sub_object()</a> from .\build\thread.o(.text._ZN4rtos6ThreadD2Ev) referenced from .\build\thread.o(.rodata._ZTVN4rtos6ThreadE)
  <LI><a href="#[50]">CThunk&lang;mbed::SerialBase&rang;::trampoline(mbed::SerialBase*, void*, void(mbed::SerialBase::**)(void*))</a> from .\build\serialbase.o(.text._ZN6CThunkIN4mbed10SerialBaseEE10trampolineEPS1_PvPMS1_FvS4_E) referenced 2 times from .\build\serialbase.o(.text._ZN6CThunkIN4mbed10SerialBaseEE4initEPS1_MS1_FvPvES4_)
  <LI><a href="#[49]">events::EventQueue::dispatch_forever()</a> from .\build\mbed_shared_queues.o(.text._ZN6events10EventQueue16dispatch_foreverEv) referenced 2 times from .\build\main.o(.text._Z7main_thv)
@@ -1680,7 +1680,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[14b]"></a>main</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, .\build\mbed_boot.o(.text.$Sub$$main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 752 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 760 + Unknown Stack Size
 <LI>Call Chain = main &rArr; $Super$$main &rArr; main_th() &rArr; processLine(std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;) &rArr; Tokenizer::Tokenizer(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&, const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;::basic_string(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; operator new(unsigned) &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_main
@@ -2781,7 +2781,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[236]"></a>mbed::NonCopyable&lang;rtos::Mutex&rang;::~NonCopyable__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, .\build\mutex.o(.text._ZN4mbed11NonCopyableIN4rtos5MutexEED2Ev))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::~Mutex()
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::~Mutex()
 </UL>
 
 <P><STRONG><a name="[23a]"></a>mbed::NonCopyable&lang;rtos::Queue&lang;message_t, (unsigned)16&rang;&rang;::NonCopyable__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, .\build\main.o(.text._ZN4mbed11NonCopyableIN4rtos5QueueI9message_tLj16EEEEC2Ev))
@@ -2797,7 +2797,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[24b]"></a>mbed::NonCopyable&lang;rtos::Thread&rang;::~NonCopyable__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, .\build\thread.o(.text._ZN4mbed11NonCopyableIN4rtos6ThreadEED2Ev))
-<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
+<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
 </UL>
 
 <P><STRONG><a name="[24f]"></a>mbed::NonCopyable&lang;rtos::Semaphore&rang;::NonCopyable__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, .\build\semaphore.o(.text._ZN4mbed11NonCopyableIN4rtos9SemaphoreEEC2Ev))
@@ -3175,7 +3175,7 @@ Global Symbols
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL16equeue_tick_initv
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::InterruptIn::~InterruptIn()
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::~SerialBase()
 <LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 <LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::attach(mbed::Callback&lang;void()&rang;, mbed::SerialBase::IrqType)
@@ -3447,20 +3447,20 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;rtos::Mutex&rang;::get()
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*)
 <LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.41
-<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.13
+<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.15
 </UL>
 
 <P><STRONG><a name="[3b3]"></a>rtos::Mutex::Mutex__sub_object()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, .\build\mutex.o(.text._ZN4rtos5MutexC2Ev), UNUSED)
 
-<P><STRONG><a name="[55]"></a>rtos::Mutex::~Mutex()</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, .\build\mutex.o(.text._ZN4rtos5MutexD2Ev))
+<P><STRONG><a name="[56]"></a>rtos::Mutex::~Mutex()</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, .\build\mutex.o(.text._ZN4rtos5MutexD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rtos::Mutex::~Mutex() &rArr; osMutexDelete &rArr; EvrRtxMutexError &rArr;  error (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexDelete
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::NonCopyable&lang;rtos::Mutex&rang;::~NonCopyable__sub_object()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> main.o(.text.__cxx_global_var_init.13)
+<BR>[Address Reference Count : 2]<UL><LI> main.o(.text.__cxx_global_var_init.15)
 <LI> main.o(.text.__cxx_global_var_init.41)
 </UL>
 <P><STRONG><a name="[3b4]"></a>rtos::Mutex::~Mutex__sub_object()</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, .\build\mutex.o(.text._ZN4rtos5MutexD2Ev), UNUSED)
@@ -3555,7 +3555,7 @@ Global Symbols
 <LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Semaphore::release()
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadTerminate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
 </UL>
 
 <P><STRONG><a name="[247]"></a>rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*)</STRONG> (Thumb, 86 bytes, Stack size 32 bytes, .\build\mbed_shared_queues.o(.text._ZN4rtos6ThreadC2E12osPriority_tjPhPKc))
@@ -3568,8 +3568,8 @@ Global Symbols
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::constructor(osPriority_t, unsigned, unsigned char*, const char*)
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::NonCopyable&lang;rtos::Thread&rang;::NonCopyable__sub_object()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.38
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.37
+<BR>[Called By]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.9
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.10
 </UL>
 
 <P><STRONG><a name="[9e]"></a>rtos::Thread::~Thread__deallocating()</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, .\build\thread.o(.text._ZN4rtos6ThreadD0Ev))
@@ -3580,19 +3580,19 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> thread.o(.rodata._ZTVN4rtos6ThreadE)
 </UL>
-<P><STRONG><a name="[56]"></a>rtos::Thread::~Thread()</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, .\build\thread.o(.text._ZN4rtos6ThreadD2Ev))
+<P><STRONG><a name="[55]"></a>rtos::Thread::~Thread()</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, .\build\thread.o(.text._ZN4rtos6ThreadD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 472 + Unknown Stack Size
 <LI>Call Chain = rtos::Thread::~Thread() &rArr; rtos::Thread::terminate() &rArr; rtos::Semaphore::release() &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; EvrRtxSemaphoreError &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Callback&lang;void()&rang;::~Callback__sub_object()
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::~Mutex()
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::~Mutex()
 <LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Semaphore::~Semaphore()
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator delete[] (void*)
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::terminate()
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::NonCopyable&lang;rtos::Thread&rang;::~NonCopyable__sub_object()
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> main.o(.text.__cxx_global_var_init.37)
-<LI> main.o(.text.__cxx_global_var_init.38)
+<BR>[Address Reference Count : 2]<UL><LI> main.o(.text.__cxx_global_var_init.9)
+<LI> main.o(.text.__cxx_global_var_init.10)
 </UL>
 <P><STRONG><a name="[9d]"></a>rtos::Thread::~Thread__sub_object()</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, .\build\thread.o(.text._ZN4rtos6ThreadD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = rtos::Thread::~Thread__sub_object()
@@ -3641,7 +3641,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreDelete
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::NonCopyable&lang;rtos::Semaphore&rang;::~NonCopyable__sub_object()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
 </UL>
 
 <P><STRONG><a name="[3b6]"></a>rtos::Semaphore::~Semaphore__sub_object()</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, .\build\semaphore.o(.text._ZN4rtos9SemaphoreD2Ev), UNUSED)
@@ -3926,7 +3926,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::~Thread()
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::start(mbed::Callback&lang;void()&rang;)
 </UL>
 
@@ -3971,16 +3971,16 @@ Global Symbols
 <P><STRONG><a name="[26a]"></a>__cxa_atexit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, .\build\mbed_retarget.o(.text.__cxa_atexit))
 <BR><BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init
+<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.9
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.8
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.7
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.44
 <LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.41
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.40
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.39
-<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.38
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.37
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.2
-<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.13
+<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.15
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.10
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.1
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init
 </UL>
@@ -4588,8 +4588,8 @@ Global Symbols
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
 </UL>
 
-<P><STRONG><a name="[14d]"></a>$Super$$main</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, .\build\main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 744 + Unknown Stack Size
+<P><STRONG><a name="[14d]"></a>$Super$$main</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, .\build\main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 752 + Unknown Stack Size
 <LI>Call Chain = $Super$$main &rArr; main_th() &rArr; processLine(std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;) &rArr; Tokenizer::Tokenizer(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&, const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;::basic_string(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; operator new(unsigned) &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Callback&lang;void()&rang;::~Callback__sub_object()
@@ -4856,7 +4856,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexError
 <LI><a href="#[2e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::~Mutex()
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::~Mutex()
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
 </UL>
 
@@ -5509,7 +5509,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[63]"></a>pre_main</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, .\build\mbed_boot.o(.text.pre_main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 760 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 768 + Unknown Stack Size
 <LI>Call Chain = pre_main &rArr; main &rArr; $Super$$main &rArr; main_th() &rArr; processLine(std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;) &rArr; Tokenizer::Tokenizer(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&, const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;::basic_string(const std::__1::basic_string&lang;char, std::__1::char_traits&lang;char&rang;, std::__1::allocator&lang;char&rang;&rang;&) &rArr; operator new(unsigned) &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexNew
@@ -7171,7 +7171,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 544 + Unknown Stack Size
 <LI>Call Chain = _GLOBAL__sub_I_main.cpp &rArr; __cxx_global_var_init.8 &rArr; events::EventQueue::EventQueue(unsigned, unsigned char*) &rArr; equeue_create &rArr; equeue_create_inplace &rArr; equeue_sema_create &rArr; osEventFlagsNew &rArr; EvrRtxEventFlagsError &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.8
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.9
+<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.8
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.7
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.6
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.5
@@ -7180,11 +7181,10 @@ Local Symbols
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.40
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.4
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.39
-<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.38
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.37
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.3
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.2
-<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.13
+<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.15
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.10
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.1
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init
 </UL>
@@ -7211,8 +7211,18 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
 </UL>
 
-<P><STRONG><a name="[197]"></a>__cxx_global_var_init.13</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, .\build\main.o(.text.__cxx_global_var_init.13))
-<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = __cxx_global_var_init.13 &rArr; rtos::Mutex::Mutex() &rArr; rtos::Mutex::constructor(const char*) &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
+<P><STRONG><a name="[198]"></a>__cxx_global_var_init.10</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, .\build\main.o(.text.__cxx_global_var_init.10))
+<BR><BR>[Stack]<UL><LI>Max Depth = 528 + Unknown Stack Size
+<LI>Call Chain = __cxx_global_var_init.10 &rArr; rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*) &rArr; rtos::Semaphore::Semaphore(int) &rArr; rtos::Semaphore::constructor(int, unsigned short) &rArr; osSemaphoreNew &rArr; EvrRtxSemaphoreError &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
+<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
+</UL>
+
+<P><STRONG><a name="[199]"></a>__cxx_global_var_init.15</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, .\build\main.o(.text.__cxx_global_var_init.15))
+<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = __cxx_global_var_init.15 &rArr; rtos::Mutex::Mutex() &rArr; rtos::Mutex::constructor(const char*) &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Mutex::Mutex()
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
@@ -7234,26 +7244,6 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __cxx_global_var_init.3 &rArr; mbed::DigitalIn::DigitalIn__sub_object(PinName) &rArr; gpio_init_in &rArr; gpio_init_in_ex &rArr; _gpio_init_in &rArr; gpio_init &rArr; gpio_set &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::DigitalIn::DigitalIn__sub_object(PinName)
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
-</UL>
-
-<P><STRONG><a name="[198]"></a>__cxx_global_var_init.37</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, .\build\main.o(.text.__cxx_global_var_init.37))
-<BR><BR>[Stack]<UL><LI>Max Depth = 528 + Unknown Stack Size
-<LI>Call Chain = __cxx_global_var_init.37 &rArr; rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*) &rArr; rtos::Semaphore::Semaphore(int) &rArr; rtos::Semaphore::constructor(int, unsigned short) &rArr; osSemaphoreNew &rArr; EvrRtxSemaphoreError &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
-<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*)
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
-</UL>
-
-<P><STRONG><a name="[199]"></a>__cxx_global_var_init.38</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, .\build\main.o(.text.__cxx_global_var_init.38))
-<BR><BR>[Stack]<UL><LI>Max Depth = 528 + Unknown Stack Size
-<LI>Call Chain = __cxx_global_var_init.38 &rArr; rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*) &rArr; rtos::Semaphore::Semaphore(int) &rArr; rtos::Semaphore::constructor(int, unsigned short) &rArr; osSemaphoreNew &rArr; EvrRtxSemaphoreError &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
-<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
 </UL>
@@ -7335,6 +7325,16 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;events::EventQueue::EventQueue(unsigned, unsigned char*)
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
+</UL>
+
+<P><STRONG><a name="[197]"></a>__cxx_global_var_init.9</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, .\build\main.o(.text.__cxx_global_var_init.9))
+<BR><BR>[Stack]<UL><LI>Max Depth = 528 + Unknown Stack Size
+<LI>Call Chain = __cxx_global_var_init.9 &rArr; rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*) &rArr; rtos::Semaphore::Semaphore(int) &rArr; rtos::Semaphore::constructor(int, unsigned short) &rArr; osSemaphoreNew &rArr; EvrRtxSemaphoreError &rArr; error &rArr; mbed_error_vfprintf &rArr; serial_init &rArr; mbed_assert_internal &rArr; mbed_die &rArr; wait_ms &rArr; wait_us &rArr; ticker_read &rArr; ticker_read_us &rArr; initialize &rArr;  mbed_assert_internal (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
+<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtos::Thread::Thread__sub_object(osPriority_t, unsigned, unsigned char*, const char*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
 </UL>
