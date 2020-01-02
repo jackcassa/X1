@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>Nucleo_rtos_basic_f7</TargetName>
+    <TargetName>Nucleo_rtos_basic_L1</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>

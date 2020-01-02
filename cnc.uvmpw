@@ -8,12 +8,14 @@
   <WorkspaceName>WorkSpace</WorkspaceName>
 
   <project>
-    <PathAndName>.\Nucleo_rtos_basic_f7.uvprojx</PathAndName>
+    <PathAndName>.\Nucleo_rtos_basic_v2.uvprojx</PathAndName>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
-    <PathAndName>.\Nucleo_rtos_basic_v2.uvprojx</PathAndName>
+    <PathAndName>.\Nucleo_rtos_basic_f7.uvprojx</PathAndName>
     <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
 </ProjectWorkspace>

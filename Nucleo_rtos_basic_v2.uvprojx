@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Nucleo_rtos_basic_f7</TargetName>
+      <TargetName>Nucleo_rtos_basic_L1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6130001::V6.13.1::.\ARMCLANG</pCCUsed>
