@@ -410,12 +410,12 @@ void my_error_handler(uint16_t error)
 
 
 
+//LAST
 
-
+Queue<message_t, 16> queueMessage;
 
 MemoryPool<message_t, 16> mpool;
 
-Queue<message_t, 16> queueMessage;
 
 
 
@@ -577,7 +577,7 @@ int main()
   step_mode=motor2->get_parameter(L6474_STEP_MODE);
 #ifdef M3
   step_mode=motor3->get_parameter(L6474_STEP_MODE);
-#endif
+#endif   
 #endif
 
   /* Printing to the console. */
