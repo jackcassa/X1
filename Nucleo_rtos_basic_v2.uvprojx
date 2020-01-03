@@ -48,7 +48,7 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\BUILD\</OutputDirectory>
+          <OutputDirectory>.\BUILDL1\</OutputDirectory>
           <OutputName>Nucleo_rtos_basic_v2</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
