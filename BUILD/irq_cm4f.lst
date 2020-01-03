@@ -219,16 +219,16 @@ ARM Macro Assembler    Page 4
               00000014 
               E000EF34 
               00000000 
-Command Line: --debug --xref --cpreproc --diag_suppress=9931 --cpu=Cortex-M7.fp
-.sp -o.\build\irq_cm4f.o -I.\RTE\_Nucleo_rtos_basic_f7 -IC:\Users\Luca\AppData\
-Local\Arm\Packs\Keil\STM32F7xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F7xx\Inc
+Command Line: --debug --xref --cpreproc --diag_suppress=9931 --cpu=Cortex-M4.fp
+.sp -o.\build\irq_cm4f.o -I.\RTE\_Nucleo_rtos_basic_F4 -IC:\Users\Luca\AppData\
+Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Inc
 lude -II:\HDDProgInstall\keil\ARM\CMSIS\Include --predefine="__UVISION_VERSION 
-SETA 529" --predefine="STM32F746xx SETA 1" --cpreproc_opts=-D__ASSERT_MSG,-DTRA
-NSACTION_QUEUE_SIZE_SPI=2,-D__CORTEX_M7,-DARM_MATH_CM7,-D__FPU_PRESENT=1,-DUSBH
-OST_OTHER,-D__MBED_CMSIS_RTOS_CM,-D__CMSIS_RTOS,--target=arm-arm-none-eabi,-mcp
-u=cortex-m7,-mfpu=fpv5-sp-d16,-mfloat-abi=hard,-D__UVISION_VERSION=529,-DSTM32F
-746xx --list=.\build\irq_cm4f.lst mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/TO
-OLCHAIN_ARM/TARGET_RTOS_M4_M7/irq_cm4f.S
+SETA 529" --predefine="STM32F411xE SETA 1" --cpreproc_opts=-D__ASSERT_MSG,-DTRA
+NSACTION_QUEUE_SIZE_SPI=2,-D__CORTEX_M4,-DUSB_STM_HAL,-DARM_MATH_CM4,-D__FPU_PR
+ESENT=1,-DUSBHOST_OTHER,-D__MBED_CMSIS_RTOS_CM,-D__CMSIS_RTOS,--target=arm-arm-
+none-eabi,-mcpu=cortex-m4,-mfpu=fpv4-sp-d16,-mfloat-abi=hard,-D__UVISION_VERSIO
+N=529,-DSTM32F411xE --list=.\build\irq_cm4f.lst mbed-os/rtos/TARGET_CORTEX/rtx5
+/RTX/Source/TOOLCHAIN_ARM/TARGET_RTOS_M4_M7/irq_cm4f.S
 
 
 
