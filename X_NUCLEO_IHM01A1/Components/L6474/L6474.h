@@ -716,6 +716,18 @@ public:
     }
 
 
+		/* ACTION 9 --------------------------------------------------------------*
+     * Declare here interrupt related variables, if needed.                   *
+     * Note that interrupt handling is platform dependent, see                *
+     * "Interrupt Related Methods" above.                                     *
+     *                                                                        *
+     * Example:                                                               *
+     *   + mbed:                                                              *
+     *     InterruptIn feature_irq;                                           *
+     *------------------------------------------------------------------------*/
+    /* Flag Interrupt. */
+    InterruptIn flag_irq;
+
 protected:
 
     /*** Protected Component Related Methods ***/
@@ -854,7 +866,7 @@ protected:
      */
     void L6474_EnableIrq(void)
     {
-        __enable_irq();
+      //  __enable_irq();
     }
 
     /**
@@ -864,7 +876,7 @@ protected:
      */
     void L6474_DisableIrq(void)
     {
-        __disable_irq();
+     //   __disable_irq();
     }
 
     /**
@@ -967,18 +979,7 @@ protected:
 
     /*** Component's Instance Variables ***/
 
-    /* ACTION 9 --------------------------------------------------------------*
-     * Declare here interrupt related variables, if needed.                   *
-     * Note that interrupt handling is platform dependent, see                *
-     * "Interrupt Related Methods" above.                                     *
-     *                                                                        *
-     * Example:                                                               *
-     *   + mbed:                                                              *
-     *     InterruptIn feature_irq;                                           *
-     *------------------------------------------------------------------------*/
-    /* Flag Interrupt. */
-    InterruptIn flag_irq;
-
+    
     /* ACTION 10 -------------------------------------------------------------*
      * Declare here other pin related variables, if needed.                   *
      *                                                                        *
